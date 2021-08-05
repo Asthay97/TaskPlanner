@@ -77,10 +77,6 @@ function App(props) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
   }
-  function handleSubmit(e) {
-    e.preventDefault();
-    props.addTask("Say hello!");
-  }
 
   const listHeadingRef = useRef(null);
   const prevTaskLength = usePrevious(tasks.length);
